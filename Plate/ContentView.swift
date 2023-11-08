@@ -8,14 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var state = QuakesListState(earthquakeService: EarthquakeService())
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            Group {
+                if let earthquakes = state.earthquakes {
+                    List(earthquakes) { earthquake in
+                        NavigationLink {
+                            EarthquakeDetailView(earthquake: earthquake)
+                        } label: {
+                            EarthquakeRow(earthquake: earthquake)
+                        }
+                    }
+                    
+                } else {
+                    Text("No earthquakes")
+                }
+            }
+            .onAppear {
+                state.fetchEarthquakes()
+            }
+            .navigationTitle("Earthquakes")
+            
         }
-        .padding()
+        
+        
+        
+        
     }
 }
 
