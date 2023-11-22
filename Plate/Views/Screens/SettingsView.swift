@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @ObservedObject var state: SettingsState
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            DatePicker("Start date", selection: $state.dateStart, displayedComponents: .date)
+            DatePicker("End date", selection: $state.dateEnd, displayedComponents: .date)
+        }
+        
     }
 }
 
-#Preview {
-    SettingsView()
+#Preview("Default") {
+    SettingsView(state: SettingsState())
 }
