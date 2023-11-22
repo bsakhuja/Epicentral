@@ -37,7 +37,7 @@ protocol APIClient {
 }
 
 enum EarthquakeEndpoint: APIEndpoint {
-    case query
+    case query(startTime: String, endTime: String)
     
     var baseURL: URL {
         return URL(string: "https://earthquake.usgs.gov/fdsnws/event/1")!
@@ -66,8 +66,8 @@ enum EarthquakeEndpoint: APIEndpoint {
     
     var parameters: [String: Any]? {
         switch self {
-        case .query:
-            return ["format": "geojson", "starttime": "2014-01-01", "endtime": "2014-01-02"]
+        case .query(let startTime, let endTime):
+            return ["format": "geojson", "starttime": startTime, "endtime": endTime]
         }
     }
 }
@@ -86,9 +86,6 @@ class URLSessionAPIClient<EndpointType: APIEndpoint>: APIClient {
             ])
         }
         
-        
-//        print(request)
-        
         return URLSession.shared.dataTaskPublisher(for: request)
             .subscribe(on: DispatchQueue.global(qos: .background))
             .tryMap { data, response -> Data in
@@ -104,13 +101,19 @@ class URLSessionAPIClient<EndpointType: APIEndpoint>: APIClient {
 }
 
 protocol EarthquakeServiceProtocol {
-    func getEarthquakes() -> AnyPublisher<GeoJSON, Error>
+    func getEarthquakes(startTime: Date, endTime: Date) -> AnyPublisher<GeoJSON, Error>
 }
 
 class EarthquakeService: EarthquakeServiceProtocol {
     let apiClient = URLSessionAPIClient<EarthquakeEndpoint>()
     
-    func getEarthquakes() -> AnyPublisher<GeoJSON, Error> {
-        return apiClient.request(.query)
+    func getEarthquakes(startTime: Date, endTime: Date) -> AnyPublisher<GeoJSON, Error> {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let startTimeString = dateFormatter.string(from: startTime)
+        let endTimeString = dateFormatter.string(from: endTime)
+        return apiClient.request(.query(startTime: startTimeString, endTime: endTimeString))
     }
 }

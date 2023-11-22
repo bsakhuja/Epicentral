@@ -14,13 +14,17 @@ struct Quakes: Codable {
 struct EarthquakeProperties: Identifiable {
     
     let magnitude: Double
-    let place: String
-    let time: Date
+    let place: String?
+    let time: Double
     let code: String
     let detail: URL?
     var id: String { code }
     let tsunami: Bool?
     let title: String
+    
+    var date: Date {
+        Date(timeIntervalSince1970: time / 1000)
+    }
 }
 
 extension EarthquakeProperties: Decodable {
@@ -38,14 +42,13 @@ extension EarthquakeProperties: Decodable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let rawMagnitude = try? values.decode(Double.self, forKey: .magnitude)
         let rawPlace = try? values.decode(String.self, forKey: .place)
-        let rawTime = try? values.decode(Date.self, forKey: .time)
+        let rawTime = try? values.decode(Double.self, forKey: .time)
         let rawCode = try? values.decode(String.self, forKey: .code)
         let rawDetail = try? values.decode(URL.self, forKey: .detail)
         let rawTsunami = try? values.decode(Bool.self, forKey: .tsunami)
         let rawTitle = try? values.decode(String.self, forKey: .title)
         
         guard let magnitude = rawMagnitude,
-              let place = rawPlace,
               let time = rawTime,
               let code = rawCode,
               let detail = rawDetail,
@@ -55,7 +58,7 @@ extension EarthquakeProperties: Decodable {
         }
         
         self.magnitude = magnitude
-        self.place = place
+        self.place = rawPlace
         self.time = time
         self.code = code
         self.detail = detail
@@ -65,7 +68,7 @@ extension EarthquakeProperties: Decodable {
 }
 
 extension EarthquakeProperties {
-    static let testEarthquakeProperties = EarthquakeProperties(magnitude: 2.4, place: "Los Angeles, CA", time: Date(), code: "code", detail: nil, tsunami: false, title: "M 1.4 - 32 km N of Petersville, Alaska")
+    static let testEarthquakeProperties = EarthquakeProperties(magnitude: 2.4, place: "10km SSW of Idyllwild, CA", time: 1388620296020, code: "code", detail: nil, tsunami: false, title: "M 1.3 - 10km SSW of Idyllwild, CA")
 }
 
 
