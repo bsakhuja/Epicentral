@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct PlateApp: App {
+struct EpicentralApp: App {
+    
+    var settings = SettingsState()
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(settings)
         }
     }
 }

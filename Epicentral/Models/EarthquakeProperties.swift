@@ -1,6 +1,6 @@
 //
 //  EarthquakeProperties.swift
-//  Plate
+//  Epicentral
 //
 //  Created by Brian Sakhuja on 11/7/23.
 //

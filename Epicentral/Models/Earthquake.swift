@@ -8,6 +8,7 @@
 import Foundation
 
 struct Earthquake: Identifiable, Decodable {
+    
     var id: String
     let type: String
     let properties: EarthquakeProperties
@@ -51,4 +52,14 @@ extension Earthquake {
     }
     
     static let testEarthquake = Earthquake(id: "", type: "Feature", properties: EarthquakeProperties.testEarthquakeProperties, geometry: EarthquakeGeometry.testEarthquakeGeometry)
+}
+
+extension Earthquake: Hashable {
+    static func == (lhs: Earthquake, rhs: Earthquake) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }

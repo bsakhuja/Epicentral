@@ -11,4 +11,14 @@ class SettingsState: ObservableObject {
     
     @Published var dateStart: Date = Date.yesterday
     @Published var dateEnd: Date = Date.now
+    
+    @Published var isListView: Bool = true
+    @Published var isMapView: Bool = false
+    
+    @Published var isPresented: Bool = false
+    
+    func toggleMapList() {
+        isListView.toggle()
+        isMapView.toggle()
+    }
 }

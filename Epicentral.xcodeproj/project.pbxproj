@@ -21,14 +21,13 @@
 		06DA015D2AFC3EE20008FE49 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DA015C2AFC3EE20008FE49 /* Date.swift */; };
 		06DA015F2AFD91FB0008FE49 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DA015E2AFD91FB0008FE49 /* LoadingIndicator.swift */; };
 		06DA01632AFDBB0D0008FE49 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DA01622AFDBB0D0008FE49 /* SettingsView.swift */; };
-		06DA01682AFDBB460008FE49 /* EarthquakeListMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DA01672AFDBB460008FE49 /* EarthquakeListMapView.swift */; };
-		06EFE9B72AFAB91E00351973 /* PlateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9B62AFAB91E00351973 /* PlateApp.swift */; };
+		06EFE9B72AFAB91E00351973 /* EpicentralApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9B62AFAB91E00351973 /* EpicentralApp.swift */; };
 		06EFE9B92AFAB91E00351973 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9B82AFAB91E00351973 /* HomeView.swift */; };
 		06EFE9BB2AFAB92000351973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06EFE9BA2AFAB92000351973 /* Assets.xcassets */; };
 		06EFE9BE2AFAB92000351973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06EFE9BD2AFAB92000351973 /* Preview Assets.xcassets */; };
-		06EFE9C82AFAB92000351973 /* PlateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9C72AFAB92000351973 /* PlateTests.swift */; };
-		06EFE9D22AFAB92000351973 /* PlateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9D12AFAB92000351973 /* PlateUITests.swift */; };
-		06EFE9D42AFAB92000351973 /* PlateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9D32AFAB92000351973 /* PlateUITestsLaunchTests.swift */; };
+		06EFE9C82AFAB92000351973 /* EpicentralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9C72AFAB92000351973 /* EpicentralTests.swift */; };
+		06EFE9D22AFAB92000351973 /* EpicentralUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9D12AFAB92000351973 /* EpicentralUITests.swift */; };
+		06EFE9D42AFAB92000351973 /* EpicentralUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9D32AFAB92000351973 /* EpicentralUITestsLaunchTests.swift */; };
 		06EFE9E52AFAB97300351973 /* EarthquakeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9E42AFAB97300351973 /* EarthquakeProperties.swift */; };
 		06EFE9E72AFABA0300351973 /* testresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 06EFE9E62AFABA0300351973 /* testresponse.json */; };
 		06EFE9EF2AFABAAC00351973 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9EE2AFABAAC00351973 /* NetworkManager.swift */; };
@@ -70,18 +69,17 @@
 		06DA015C2AFC3EE20008FE49 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		06DA015E2AFD91FB0008FE49 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		06DA01622AFDBB0D0008FE49 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		06DA01672AFDBB460008FE49 /* EarthquakeListMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeListMapView.swift; sourceTree = "<group>"; };
 		06DA01692B05B7350008FE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		06EFE9B32AFAB91E00351973 /* Plate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		06EFE9B62AFAB91E00351973 /* PlateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateApp.swift; sourceTree = "<group>"; };
+		06EFE9B32AFAB91E00351973 /* Epicentral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Epicentral.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06EFE9B62AFAB91E00351973 /* EpicentralApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicentralApp.swift; sourceTree = "<group>"; };
 		06EFE9B82AFAB91E00351973 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		06EFE9BA2AFAB92000351973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06EFE9BD2AFAB92000351973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		06EFE9C32AFAB92000351973 /* PlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		06EFE9C72AFAB92000351973 /* PlateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateTests.swift; sourceTree = "<group>"; };
-		06EFE9CD2AFAB92000351973 /* PlateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		06EFE9D12AFAB92000351973 /* PlateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateUITests.swift; sourceTree = "<group>"; };
-		06EFE9D32AFAB92000351973 /* PlateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		06EFE9C32AFAB92000351973 /* EpicentralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EpicentralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06EFE9C72AFAB92000351973 /* EpicentralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicentralTests.swift; sourceTree = "<group>"; };
+		06EFE9CD2AFAB92000351973 /* EpicentralUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EpicentralUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06EFE9D12AFAB92000351973 /* EpicentralUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicentralUITests.swift; sourceTree = "<group>"; };
+		06EFE9D32AFAB92000351973 /* EpicentralUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicentralUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		06EFE9E42AFAB97300351973 /* EarthquakeProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeProperties.swift; sourceTree = "<group>"; };
 		06EFE9E62AFABA0300351973 /* testresponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testresponse.json; sourceTree = "<group>"; };
 		06EFE9EE2AFABAAC00351973 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				068B01A12B0DB2BD0012D86C /* FloatingButtonView */,
-				06DA01672AFDBB460008FE49 /* EarthquakeListMapView.swift */,
 				06DA01642AFDBB1E0008FE49 /* EarthquakeList */,
 				06DA015E2AFD91FB0008FE49 /* LoadingIndicator.swift */,
 			);
@@ -175,9 +172,9 @@
 		06EFE9AA2AFAB91E00351973 = {
 			isa = PBXGroup;
 			children = (
-				06EFE9B52AFAB91E00351973 /* Plate */,
-				06EFE9C62AFAB92000351973 /* PlateTests */,
-				06EFE9D02AFAB92000351973 /* PlateUITests */,
+				06EFE9B52AFAB91E00351973 /* Epicentral */,
+				06EFE9C62AFAB92000351973 /* EpicentralTests */,
+				06EFE9D02AFAB92000351973 /* EpicentralUITests */,
 				06EFE9B42AFAB91E00351973 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -185,14 +182,14 @@
 		06EFE9B42AFAB91E00351973 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				06EFE9B32AFAB91E00351973 /* Plate.app */,
-				06EFE9C32AFAB92000351973 /* PlateTests.xctest */,
-				06EFE9CD2AFAB92000351973 /* PlateUITests.xctest */,
+				06EFE9B32AFAB91E00351973 /* Epicentral.app */,
+				06EFE9C32AFAB92000351973 /* EpicentralTests.xctest */,
+				06EFE9CD2AFAB92000351973 /* EpicentralUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		06EFE9B52AFAB91E00351973 /* Plate */ = {
+		06EFE9B52AFAB91E00351973 /* Epicentral */ = {
 			isa = PBXGroup;
 			children = (
 				06DA01692B05B7350008FE49 /* Info.plist */,
@@ -201,12 +198,12 @@
 				06EFE9E22AFAB93900351973 /* Networking */,
 				06EFE9E12AFAB93300351973 /* States */,
 				06EFE9E02AFAB92B00351973 /* Views */,
-				06EFE9B62AFAB91E00351973 /* PlateApp.swift */,
+				06EFE9B62AFAB91E00351973 /* EpicentralApp.swift */,
 				06EFE9B82AFAB91E00351973 /* HomeView.swift */,
 				06EFE9BA2AFAB92000351973 /* Assets.xcassets */,
 				06EFE9BC2AFAB92000351973 /* Preview Content */,
 			);
-			path = Plate;
+			path = Epicentral;
 			sourceTree = "<group>";
 		};
 		06EFE9BC2AFAB92000351973 /* Preview Content */ = {
@@ -217,22 +214,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		06EFE9C62AFAB92000351973 /* PlateTests */ = {
+		06EFE9C62AFAB92000351973 /* EpicentralTests */ = {
 			isa = PBXGroup;
 			children = (
-				06EFE9C72AFAB92000351973 /* PlateTests.swift */,
+				06EFE9C72AFAB92000351973 /* EpicentralTests.swift */,
 				06EFE9F22AFAC2AD00351973 /* TestData.swift */,
 			);
-			path = PlateTests;
+			path = EpicentralTests;
 			sourceTree = "<group>";
 		};
-		06EFE9D02AFAB92000351973 /* PlateUITests */ = {
+		06EFE9D02AFAB92000351973 /* EpicentralUITests */ = {
 			isa = PBXGroup;
 			children = (
-				06EFE9D12AFAB92000351973 /* PlateUITests.swift */,
-				06EFE9D32AFAB92000351973 /* PlateUITestsLaunchTests.swift */,
+				06EFE9D12AFAB92000351973 /* EpicentralUITests.swift */,
+				06EFE9D32AFAB92000351973 /* EpicentralUITestsLaunchTests.swift */,
 			);
-			path = PlateUITests;
+			path = EpicentralUITests;
 			sourceTree = "<group>";
 		};
 		06EFE9E02AFAB92B00351973 /* Views */ = {
@@ -278,9 +275,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		06EFE9B22AFAB91E00351973 /* Plate */ = {
+		06EFE9B22AFAB91E00351973 /* Epicentral */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 06EFE9D72AFAB92000351973 /* Build configuration list for PBXNativeTarget "Plate" */;
+			buildConfigurationList = 06EFE9D72AFAB92000351973 /* Build configuration list for PBXNativeTarget "Epicentral" */;
 			buildPhases = (
 				06EFE9AF2AFAB91E00351973 /* Sources */,
 				06EFE9B02AFAB91E00351973 /* Frameworks */,
@@ -290,14 +287,14 @@
 			);
 			dependencies = (
 			);
-			name = Plate;
+			name = Epicentral;
 			productName = Plate;
-			productReference = 06EFE9B32AFAB91E00351973 /* Plate.app */;
+			productReference = 06EFE9B32AFAB91E00351973 /* Epicentral.app */;
 			productType = "com.apple.product-type.application";
 		};
-		06EFE9C22AFAB92000351973 /* PlateTests */ = {
+		06EFE9C22AFAB92000351973 /* EpicentralTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 06EFE9DA2AFAB92000351973 /* Build configuration list for PBXNativeTarget "PlateTests" */;
+			buildConfigurationList = 06EFE9DA2AFAB92000351973 /* Build configuration list for PBXNativeTarget "EpicentralTests" */;
 			buildPhases = (
 				06EFE9BF2AFAB92000351973 /* Sources */,
 				06EFE9C02AFAB92000351973 /* Frameworks */,
@@ -308,14 +305,14 @@
 			dependencies = (
 				06EFE9C52AFAB92000351973 /* PBXTargetDependency */,
 			);
-			name = PlateTests;
+			name = EpicentralTests;
 			productName = PlateTests;
-			productReference = 06EFE9C32AFAB92000351973 /* PlateTests.xctest */;
+			productReference = 06EFE9C32AFAB92000351973 /* EpicentralTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		06EFE9CC2AFAB92000351973 /* PlateUITests */ = {
+		06EFE9CC2AFAB92000351973 /* EpicentralUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 06EFE9DD2AFAB92000351973 /* Build configuration list for PBXNativeTarget "PlateUITests" */;
+			buildConfigurationList = 06EFE9DD2AFAB92000351973 /* Build configuration list for PBXNativeTarget "EpicentralUITests" */;
 			buildPhases = (
 				06EFE9C92AFAB92000351973 /* Sources */,
 				06EFE9CA2AFAB92000351973 /* Frameworks */,
@@ -326,9 +323,9 @@
 			dependencies = (
 				06EFE9CF2AFAB92000351973 /* PBXTargetDependency */,
 			);
-			name = PlateUITests;
+			name = EpicentralUITests;
 			productName = PlateUITests;
-			productReference = 06EFE9CD2AFAB92000351973 /* PlateUITests.xctest */;
+			productReference = 06EFE9CD2AFAB92000351973 /* EpicentralUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -354,7 +351,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 06EFE9AE2AFAB91E00351973 /* Build configuration list for PBXProject "Plate" */;
+			buildConfigurationList = 06EFE9AE2AFAB91E00351973 /* Build configuration list for PBXProject "Epicentral" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -367,9 +364,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				06EFE9B22AFAB91E00351973 /* Plate */,
-				06EFE9C22AFAB92000351973 /* PlateTests */,
-				06EFE9CC2AFAB92000351973 /* PlateUITests */,
+				06EFE9B22AFAB91E00351973 /* Epicentral */,
+				06EFE9C22AFAB92000351973 /* EpicentralTests */,
+				06EFE9CC2AFAB92000351973 /* EpicentralUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -425,9 +422,8 @@
 				068B01A82B0DB8B20012D86C /* SettingsState.swift in Sources */,
 				06EFE9F52AFAC3B800351973 /* GeoJSON.swift in Sources */,
 				06DA01532AFC0DD30008FE49 /* EarthquakeGeometry.swift in Sources */,
-				06DA01682AFDBB460008FE49 /* EarthquakeListMapView.swift in Sources */,
 				068B01A32B0DB5A90012D86C /* FloatingButtonView.swift in Sources */,
-				06EFE9B72AFAB91E00351973 /* PlateApp.swift in Sources */,
+				06EFE9B72AFAB91E00351973 /* EpicentralApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06EFE9C82AFAB92000351973 /* PlateTests.swift in Sources */,
+				06EFE9C82AFAB92000351973 /* EpicentralTests.swift in Sources */,
 				06EFE9F32AFAC2AD00351973 /* TestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,8 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06EFE9D22AFAB92000351973 /* PlateUITests.swift in Sources */,
-				06EFE9D42AFAB92000351973 /* PlateUITestsLaunchTests.swift in Sources */,
+				06EFE9D22AFAB92000351973 /* EpicentralUITests.swift in Sources */,
+				06EFE9D42AFAB92000351973 /* EpicentralUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,12 +450,12 @@
 /* Begin PBXTargetDependency section */
 		06EFE9C52AFAB92000351973 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 06EFE9B22AFAB91E00351973 /* Plate */;
+			target = 06EFE9B22AFAB91E00351973 /* Epicentral */;
 			targetProxy = 06EFE9C42AFAB92000351973 /* PBXContainerItemProxy */;
 		};
 		06EFE9CF2AFAB92000351973 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 06EFE9B22AFAB91E00351973 /* Plate */;
+			target = 06EFE9B22AFAB91E00351973 /* Epicentral */;
 			targetProxy = 06EFE9CE2AFAB92000351973 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -591,13 +587,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Plate/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Epicentral/Preview Content\"";
 				DEVELOPMENT_TEAM = TAK496UJ6Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Plate/Info.plist;
+				INFOPLIST_FILE = Epicentral/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -605,7 +603,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.Plate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.Epicentral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -620,13 +618,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Plate/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Epicentral/Preview Content\"";
 				DEVELOPMENT_TEAM = TAK496UJ6Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Plate/Info.plist;
+				INFOPLIST_FILE = Epicentral/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -634,7 +634,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.Plate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.Epicentral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -657,7 +657,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Plate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Epicentral.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Epicentral";
 			};
 			name = Debug;
 		};
@@ -676,7 +676,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Plate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Epicentral.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Epicentral";
 			};
 			name = Release;
 		};
@@ -717,7 +717,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06EFE9AE2AFAB91E00351973 /* Build configuration list for PBXProject "Plate" */ = {
+		06EFE9AE2AFAB91E00351973 /* Build configuration list for PBXProject "Epicentral" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06EFE9D52AFAB92000351973 /* Debug */,
@@ -726,7 +726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		06EFE9D72AFAB92000351973 /* Build configuration list for PBXNativeTarget "Plate" */ = {
+		06EFE9D72AFAB92000351973 /* Build configuration list for PBXNativeTarget "Epicentral" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06EFE9D82AFAB92000351973 /* Debug */,
@@ -735,7 +735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		06EFE9DA2AFAB92000351973 /* Build configuration list for PBXNativeTarget "PlateTests" */ = {
+		06EFE9DA2AFAB92000351973 /* Build configuration list for PBXNativeTarget "EpicentralTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06EFE9DB2AFAB92000351973 /* Debug */,
@@ -744,7 +744,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		06EFE9DD2AFAB92000351973 /* Build configuration list for PBXNativeTarget "PlateUITests" */ = {
+		06EFE9DD2AFAB92000351973 /* Build configuration list for PBXNativeTarget "EpicentralUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06EFE9DE2AFAB92000351973 /* Debug */,

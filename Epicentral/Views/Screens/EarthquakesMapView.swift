@@ -6,13 +6,31 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct EarthquakesMapView: View {
+    
+    @ObservedObject var state: EarthquakesState
+    
+    @State var region = MKCoordinateRegion(center:.init(latitude: -32.5,
+                                                        longitude: 115.75),
+                                           latitudinalMeters: 100_000,
+                                           longitudinalMeters: 100_000)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if let earthquakes = state.earthquakes {
+            Map() {
+                ForEach(earthquakes, id: \.self) { result in
+                    Marker(result.id, coordinate: result.geometry.coordinate2D)
+                }
+            }
+        } else {
+            Text("No earthquakes! Try adjusting your search criteria.")
+        }
+        
     }
 }
 
 #Preview {
-    EarthquakesMapView()
+    EarthquakesMapView(state: .previewStateDefault)
 }

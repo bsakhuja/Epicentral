@@ -15,8 +15,18 @@ struct HomeView: View {
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            EarthquakeListView(state: state, settings: settings)
-            FloatingButtonView(imageName: "map", action: { })
+            if settings.isListView {
+                EarthquakeListView(state: state)
+            } else {
+                EarthquakesMapView(state: state)
+            }
+            
+            FloatingButtonView(
+                imageName: "map",
+                action: {
+                    settings.toggleMapList()
+                })
+            .padding()
         }
         
         
@@ -27,4 +37,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environmentObject(SettingsState())
 }

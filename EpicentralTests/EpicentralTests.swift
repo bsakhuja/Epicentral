@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Plate
+@testable import Epicentral
 
 final class PlateTests: XCTestCase {
     
