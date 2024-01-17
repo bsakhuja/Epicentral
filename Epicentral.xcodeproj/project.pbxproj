@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065FE1312B574D250014FD45 /* ApplicationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FE1302B574D250014FD45 /* ApplicationInfo.swift */; };
 		068B01A32B0DB5A90012D86C /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B01A22B0DB5A90012D86C /* FloatingButtonView.swift */; };
 		068B01A82B0DB8B20012D86C /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B01A72B0DB8B20012D86C /* SettingsState.swift */; };
 		068B01AA2B0DB9540012D86C /* EarthquakeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B01A92B0DB9540012D86C /* EarthquakeListView.swift */; };
@@ -21,6 +22,7 @@
 		06DA015D2AFC3EE20008FE49 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DA015C2AFC3EE20008FE49 /* Date.swift */; };
 		06DA015F2AFD91FB0008FE49 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DA015E2AFD91FB0008FE49 /* LoadingIndicator.swift */; };
 		06DA01632AFDBB0D0008FE49 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DA01622AFDBB0D0008FE49 /* SettingsView.swift */; };
+		06EB16902B50EF51006BA666 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EB168F2B50EF51006BA666 /* Round.swift */; };
 		06EFE9B72AFAB91E00351973 /* EpicentralApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9B62AFAB91E00351973 /* EpicentralApp.swift */; };
 		06EFE9B92AFAB91E00351973 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9B82AFAB91E00351973 /* HomeView.swift */; };
 		06EFE9BB2AFAB92000351973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06EFE9BA2AFAB92000351973 /* Assets.xcassets */; };
@@ -55,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		065FE1302B574D250014FD45 /* ApplicationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInfo.swift; sourceTree = "<group>"; };
 		068B01A22B0DB5A90012D86C /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 		068B01A72B0DB8B20012D86C /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
 		068B01A92B0DB9540012D86C /* EarthquakeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeListView.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		06DA015E2AFD91FB0008FE49 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		06DA01622AFDBB0D0008FE49 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		06DA01692B05B7350008FE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		06EB168F2B50EF51006BA666 /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		06EFE9B32AFAB91E00351973 /* Epicentral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Epicentral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06EFE9B62AFAB91E00351973 /* EpicentralApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicentralApp.swift; sourceTree = "<group>"; };
 		06EFE9B82AFAB91E00351973 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				06DA01572AFC2DA60008FE49 /* Extensions */,
+				06EB168F2B50EF51006BA666 /* Round.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				06DA01582AFC2DB60008FE49 /* CLLocation.swift */,
 				06DA015A2AFC2DD70008FE49 /* CLPlacemark.swift */,
 				06DA015C2AFC3EE20008FE49 /* Date.swift */,
+				065FE1302B574D250014FD45 /* ApplicationInfo.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -416,7 +422,9 @@
 				06DA015B2AFC2DD70008FE49 /* CLPlacemark.swift in Sources */,
 				068B01AA2B0DB9540012D86C /* EarthquakeListView.swift in Sources */,
 				06DA014F2AFBFEE40008FE49 /* EarthquakeDetailView.swift in Sources */,
+				065FE1312B574D250014FD45 /* ApplicationInfo.swift in Sources */,
 				06DA01512AFC0DAE0008FE49 /* Earthquake.swift in Sources */,
+				06EB16902B50EF51006BA666 /* Round.swift in Sources */,
 				06DA014C2AFB0B4E0008FE49 /* EarthquakeRow.swift in Sources */,
 				06DA015F2AFD91FB0008FE49 /* LoadingIndicator.swift in Sources */,
 				068B01A82B0DB8B20012D86C /* SettingsState.swift in Sources */,
@@ -595,7 +603,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -626,7 +633,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

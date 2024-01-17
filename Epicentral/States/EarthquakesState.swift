@@ -13,6 +13,7 @@ class EarthquakesState: ObservableObject {
     let earthquakeService: EarthquakeServiceProtocol
     @Published var earthquakes: [Earthquake]?
     @Published var isLoading: Bool = true
+    @Published var shouldShowFloatingButton: Bool = true
     
     init(earthquakeService: EarthquakeServiceProtocol) {
         self.earthquakeService = earthquakeService

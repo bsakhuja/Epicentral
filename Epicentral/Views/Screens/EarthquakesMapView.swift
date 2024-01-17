@@ -17,13 +17,26 @@ struct EarthquakesMapView: View {
                                            latitudinalMeters: 100_000,
                                            longitudinalMeters: 100_000)
     
+    @State private var selectedEarthquake: Earthquake?
+    
     var body: some View {
         if let earthquakes = state.earthquakes {
-            Map() {
+            Map(selection: $selectedEarthquake) {
                 ForEach(earthquakes, id: \.self) { result in
-                    Marker(result.id, coordinate: result.geometry.coordinate2D)
+                    Marker(result.properties.title, coordinate: result.geometry.coordinate2D)
+                        .tag(result.id)
                 }
             }
+            // TODO/ make a detail view below then have button go to detail view
+//            .safeAreaInset(edge: .bottom) {
+//                        if let selectedEarthquake {
+//                            Text(selectedEarthquake.id)
+//                                .frame(height: 128)
+//                                .clipShape(RoundedRectangle(cornerRadius: 10))
+//                                .padding([.top, .horizontal])
+//                                
+//                        }
+//                    }
         } else {
             Text("No earthquakes! Try adjusting your search criteria.")
         }

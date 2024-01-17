@@ -22,11 +22,14 @@ struct HomeView: View {
             }
             
             FloatingButtonView(
-                imageName: "map",
+                imageName: settings.isListView ? "map" : "list.dash",
                 action: {
-                    settings.toggleMapList()
+                    withAnimation {
+                        settings.toggleMapList()
+                    }
                 })
             .padding()
+            .opacity(state.shouldShowFloatingButton ? 1 : 0)
         }
         
         

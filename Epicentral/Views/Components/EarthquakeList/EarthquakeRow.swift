@@ -16,7 +16,7 @@ struct EarthquakeRow: View {
                     Text("Magnitude")
                         .font(.footnote)
                         .foregroundStyle(Color.gray)
-                    Text(earthquake.properties.magnitude.description)
+                    Text(preciseRound(earthquake.properties.magnitude, precision: .hundredths))
                         .font(.title)
                         .bold()
                 }

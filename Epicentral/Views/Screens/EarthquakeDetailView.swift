@@ -18,9 +18,9 @@ struct EarthquakeDetailView: View {
             
         }
         .mapControls {
-            MapUserLocationButton()
-            MapCompass()
-            MapScaleView()
+//            MapUserLocationButton()
+//            MapCompass()
+//            MapScaleView()
         }
         ScrollView {
             VStack(alignment: .leading) {
@@ -31,7 +31,7 @@ struct EarthquakeDetailView: View {
                 HStack {
                     Text("Magnitude")
                     Spacer()
-                    Text(earthquake.properties.magnitude.description)
+                    Text(preciseRound(earthquake.properties.magnitude, precision: .hundredths))
                 }
                 HStack {
                     Text("Date & Time")
@@ -51,7 +51,7 @@ struct EarthquakeDetailView: View {
             }
         }
         .padding()
-//        .navigationTitle(earthquake.properties.title)
+        .navigationTitle("Earthquake details")
     }
 }
 

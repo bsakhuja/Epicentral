@@ -19,6 +19,17 @@ struct EarthquakeListView: View {
                         List(earthquakes) { earthquake in
                             NavigationLink {
                                 EarthquakeDetailView(earthquake: earthquake)
+                                    .onAppear {
+                                        withAnimation {
+                                            state.shouldShowFloatingButton = false
+                                        }
+                                    }
+                                    .onDisappear {
+                                        withAnimation {
+                                            state.shouldShowFloatingButton = true
+                                        }
+                                    }
+                                
                             } label: {
                                 EarthquakeRow(earthquake: earthquake)
                             }

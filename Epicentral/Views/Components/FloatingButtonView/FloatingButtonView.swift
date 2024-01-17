@@ -22,7 +22,6 @@ struct FloatingButtonView: View {
                 .foregroundColor(.white)
                 .clipShape(Circle())
                 .shadow(radius: 4, x: 0, y: 4)
-            
         }
     }
 }
