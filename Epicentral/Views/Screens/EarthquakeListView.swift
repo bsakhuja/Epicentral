@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct EarthquakeListView: View {
+    @State private var searchText = ""
     @ObservedObject var state: EarthquakesState
     @EnvironmentObject var settings: SettingsState
+    
+    var filteredEarthquakes: [Earthquake]? {
+        state.earthquakes?.filter {
+            $0.properties.magnitude < Double(settings.magnitudeUpper) &&
+            $0.properties.magnitude > Double(settings.magnitudeLower)
+        }
+    }
+    
+    var searchResults: [Earthquake]? {
+        if searchText.isEmpty {
+            return filteredEarthquakes
+        } else {
+            return filteredEarthquakes?.filter {
+                $0.properties.place?.contains(searchText) ?? false
+            }
+        }
+    }
     
     var body: some View {
         ZStack {
             NavigationStack {
                 Group {
-                    if let earthquakes = state.earthquakes {
+                    if let earthquakes = searchResults, earthquakes.count > 0 {
                         List(earthquakes) { earthquake in
                             NavigationLink {
                                 EarthquakeDetailView(earthquake: earthquake)
@@ -36,7 +54,8 @@ struct EarthquakeListView: View {
                         }
                         
                     } else {
-                        Text("No earthquakes")
+                        Text("No earthquakes to show").font(.title)
+                        Text("Try adjusting your search settings or query").font(.subheadline)
                         Spacer()
                     }
                 }
@@ -54,7 +73,7 @@ struct EarthquakeListView: View {
                     Button {
                         settings.isPresented.toggle()
                     } label: {
-                        Image(systemName: "gearshape")
+                        Image(systemName: "line.3.horizontal.decrease.circle")
                     }
                 }
                 .sheet(isPresented: $settings.isPresented) {
@@ -62,6 +81,11 @@ struct EarthquakeListView: View {
                 }
                 
             }
+            .searchable(text: $searchText)
+//                ForEach(searchResults, id: \.self) { result in
+//                                Text("Are you looking for \(result)?").searchCompletion(result)
+//                            }
+//                        }
             .opacity(state.isLoading ? 0.5 : 1)
             
             LoadingIndicator()

@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class EarthquakesState: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
@@ -14,6 +15,8 @@ class EarthquakesState: ObservableObject {
     @Published var earthquakes: [Earthquake]?
     @Published var isLoading: Bool = true
     @Published var shouldShowFloatingButton: Bool = true
+    
+    @EnvironmentObject var settings: SettingsState
     
     init(earthquakeService: EarthquakeServiceProtocol) {
         self.earthquakeService = earthquakeService

@@ -11,6 +11,7 @@ import MapKit
 struct EarthquakesMapView: View {
     
     @ObservedObject var state: EarthquakesState
+    @EnvironmentObject var settings: SettingsState
     
     @State var region = MKCoordinateRegion(center:.init(latitude: -32.5,
                                                         longitude: 115.75),
@@ -19,8 +20,17 @@ struct EarthquakesMapView: View {
     
     @State private var selectedEarthquake: Earthquake?
     
+    var filteredEarthquakes: [Earthquake]? {
+        state.earthquakes?.filter {
+            $0.properties.magnitude < Double(settings.magnitudeUpper) &&
+            $0.properties.magnitude > Double(settings.magnitudeLower)
+        }
+    }
+    
     var body: some View {
-        if let earthquakes = state.earthquakes {
+        if let earthquakes = filteredEarthquakes,
+           earthquakes.count > 0
+        {
             Map(selection: $selectedEarthquake) {
                 ForEach(earthquakes, id: \.self) { result in
                     Marker(result.properties.title, coordinate: result.geometry.coordinate2D)
@@ -38,7 +48,13 @@ struct EarthquakesMapView: View {
 //                        }
 //                    }
         } else {
-            Text("No earthquakes! Try adjusting your search criteria.")
+            VStack {
+                Spacer()
+                Text("No earthquakes to show").font(.title)
+                Text("Try adjusting your search settings").font(.subheadline)
+                Spacer()
+            }
+            
         }
         
     }

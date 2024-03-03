@@ -18,26 +18,35 @@ struct SettingsView: View {
                     DatePicker("Start date", selection: $state.dateStart, displayedComponents: .date)
                     DatePicker("End date", selection: $state.dateEnd, displayedComponents: .date)
                 })
-//                Section("Magnitude", content: {
-//                    Text("No magnitude filter")
-//                    Text("Minimum magnitude")
-//                    Text("Maximum magnitude")
-//                })
-//                Section("Location", content: {
-//                    Text("Sorted by distance")
-//                    Text("Max distance from location")
-//                    Text("Location")
-//                })
-//                Section("Magnitude", content: {
-//                    Text("No magnitude filter")
-//                    Text("Minimum magnitude")
-//                    Text("Maximum magnitude")
-//                })
-//                Section("Location", content: {
-//                    Text("Sorted by distance")
-//                    Text("Max distance from location")
-//                    Text("Location")
-//                })
+                Section("Magnitude", content: {
+                    Picker("Minimum magnitude", selection: $state.magnitudeLower) {
+                        ForEach(state.availableMinMagnitudes, id: \.self) { mag in
+                            Text(String(mag))
+                        }
+                        
+                    }
+                    Picker("Minimum magnitude", selection: $state.magnitudeUpper) {
+                        ForEach(state.availableMaxMagnitudes, id: \.self) { mag in
+                            Text(String(mag))
+                        }
+                        
+                    }
+                })
+                //                Section("Location", content: {
+                //                    Text("Sorted by distance")
+                //                    Text("Max distance from location")
+                //                    Text("Location")
+                //                })
+                //                Section("Magnitude", content: {
+                //                    Text("No magnitude filter")
+                //                    Text("Minimum magnitude")
+                //                    Text("Maximum magnitude")
+                //                })
+                //                Section("Location", content: {
+                //                    Text("Sorted by distance")
+                //                    Text("Max distance from location")
+                //                    Text("Location")
+                //                })
                 
                 Section("About", content: {
                     Text("Epicentral version \(AppVersionProvider.versionAndBuild)")
@@ -46,7 +55,7 @@ struct SettingsView: View {
                 })
             }
             .navigationTitle("Search Settings")
-            
+
         }
         
         
