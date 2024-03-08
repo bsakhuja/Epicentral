@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import WebKit
 
 struct EarthquakeDetailView: View {
     
@@ -45,7 +46,12 @@ struct EarthquakeDetailView: View {
                         Text(tsunami ? "Yes" : "No")
                     }
                 }
-                
+                if let url = earthquake.properties.url {
+                    HStack {
+                        Link("View on USGS", destination: url)
+                        Spacer()
+                    }
+                }
                 
                 
             }

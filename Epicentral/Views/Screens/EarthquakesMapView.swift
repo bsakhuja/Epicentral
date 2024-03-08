@@ -19,6 +19,7 @@ struct EarthquakesMapView: View {
                                            longitudinalMeters: 100_000)
     
     @State private var selectedEarthquake: Earthquake?
+    @State private var showingEarthquakePreview = false
     
     var filteredEarthquakes: [Earthquake]? {
         state.earthquakes?.filter {
@@ -37,16 +38,23 @@ struct EarthquakesMapView: View {
                         .tag(result.id)
                 }
             }
-            // TODO/ make a detail view below then have button go to detail view
-//            .safeAreaInset(edge: .bottom) {
-//                        if let selectedEarthquake {
-//                            Text(selectedEarthquake.id)
-//                                .frame(height: 128)
-//                                .clipShape(RoundedRectangle(cornerRadius: 10))
-//                                .padding([.top, .horizontal])
-//                                
-//                        }
-//                    }
+            .onChange(of: selectedEarthquake) {
+                showingEarthquakePreview = selectedEarthquake != nil
+            }
+            .onChange(of: showingEarthquakePreview) {
+                if !showingEarthquakePreview {
+                    selectedEarthquake = nil
+                }
+            }
+            .animation(.easeInOut(duration: 0.3), value: selectedEarthquake)
+            .sheet(isPresented: $showingEarthquakePreview, content: {
+                if let earthquake = selectedEarthquake {
+                    EarthquakePreviewView(earthquake: earthquake)
+                        .presentationDetents([.fraction(0.25)])
+                        .presentationDragIndicator(.visible)
+                }
+                
+            })
         } else {
             VStack {
                 Spacer()

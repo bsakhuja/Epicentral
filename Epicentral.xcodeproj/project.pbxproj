@@ -37,6 +37,7 @@
 		06EFE9F32AFAC2AD00351973 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9F22AFAC2AD00351973 /* TestData.swift */; };
 		06EFE9F52AFAC3B800351973 /* GeoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9F42AFAC3B800351973 /* GeoJSON.swift */; };
 		06EFE9F92AFAD6D500351973 /* EarthquakesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9F82AFAD6D500351973 /* EarthquakesState.swift */; };
+		06F44F7B2B9A7DEA0024532B /* EarthquakePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F44F7A2B9A7DEA0024532B /* EarthquakePreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		06EFE9F22AFAC2AD00351973 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		06EFE9F42AFAC3B800351973 /* GeoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSON.swift; sourceTree = "<group>"; };
 		06EFE9F82AFAD6D500351973 /* EarthquakesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesState.swift; sourceTree = "<group>"; };
+		06F44F7A2B9A7DEA0024532B /* EarthquakePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakePreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				068B01A12B0DB2BD0012D86C /* FloatingButtonView */,
 				06DA01642AFDBB1E0008FE49 /* EarthquakeList */,
 				06DA015E2AFD91FB0008FE49 /* LoadingIndicator.swift */,
+				06F44F7A2B9A7DEA0024532B /* EarthquakePreviewView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				06EFE9F52AFAC3B800351973 /* GeoJSON.swift in Sources */,
 				06DA01532AFC0DD30008FE49 /* EarthquakeGeometry.swift in Sources */,
 				068B01A32B0DB5A90012D86C /* FloatingButtonView.swift in Sources */,
+				06F44F7B2B9A7DEA0024532B /* EarthquakePreviewView.swift in Sources */,
 				06EFE9B72AFAB91E00351973 /* EpicentralApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,7 +622,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 162;
 				DEVELOPMENT_ASSET_PATHS = "\"Epicentral/Preview Content\"";
 				DEVELOPMENT_TEAM = DUCAN2M87U;
 				ENABLE_PREVIEWS = YES;
@@ -634,7 +638,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.Epicentral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -652,7 +656,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 162;
 				DEVELOPMENT_ASSET_PATHS = "\"Epicentral/Preview Content\"";
 				DEVELOPMENT_TEAM = DUCAN2M87U;
 				ENABLE_PREVIEWS = YES;
@@ -668,7 +672,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.Epicentral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -685,7 +689,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 162;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -704,7 +708,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 162;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -722,7 +726,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 162;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.PlateUITests;
@@ -739,7 +743,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 162;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.PlateUITests;

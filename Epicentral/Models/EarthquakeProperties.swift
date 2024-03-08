@@ -21,6 +21,7 @@ struct EarthquakeProperties: Identifiable {
     var id: String { code }
     let tsunami: Bool?
     let title: String
+    let url: URL?
     
     var date: Date {
         Date(timeIntervalSince1970: time / 1000)
@@ -36,6 +37,7 @@ extension EarthquakeProperties: Decodable {
         case detail
         case tsunami
         case title
+        case url
     }
     
     init(from decoder: Decoder) throws {
@@ -47,12 +49,15 @@ extension EarthquakeProperties: Decodable {
         let rawDetail = try? values.decode(URL.self, forKey: .detail)
         let rawTsunami = try? values.decode(Bool.self, forKey: .tsunami)
         let rawTitle = try? values.decode(String.self, forKey: .title)
+        let rawURL = try? values.decode(String.self, forKey: .url)
         
         guard let magnitude = rawMagnitude,
               let time = rawTime,
               let code = rawCode,
               let detail = rawDetail,
-              let title = rawTitle
+              let title = rawTitle,
+              let urlString = rawURL,
+              let url = URL(string: urlString)
         else {
             throw QuakeError.missingData
         }
@@ -64,11 +69,12 @@ extension EarthquakeProperties: Decodable {
         self.detail = detail
         self.tsunami = rawTsunami
         self.title = title
+        self.url = url
     }
 }
 
 extension EarthquakeProperties {
-    static let testEarthquakeProperties = EarthquakeProperties(magnitude: 2.4, place: "10km SSW of Idyllwild, CA", time: 1388620296020, code: "code", detail: nil, tsunami: false, title: "M 1.3 - 10km SSW of Idyllwild, CA")
+    static let testEarthquakeProperties = EarthquakeProperties(magnitude: 2.4, place: "10km SSW of Idyllwild, CA", time: 1388620296020, code: "code", detail: nil, tsunami: false, title: "M 1.3 - 10km SSW of Idyllwild, CA", url: URL(string: "https://earthquake.usgs.gov/earthquakes/eventpage/tx2024eqpe"))
 }
 
 
