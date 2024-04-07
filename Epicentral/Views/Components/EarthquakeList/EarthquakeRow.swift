@@ -27,6 +27,7 @@ struct EarthquakeRow: View {
                         .foregroundStyle(Color.gray)
                     Text(earthquake.properties.place ?? "Place")
                         .font(.subheadline)
+                        .multilineTextAlignment(.trailing)
                     
                 }
             }

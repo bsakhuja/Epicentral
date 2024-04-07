@@ -23,6 +23,10 @@ struct EarthquakeProperties: Identifiable {
     let title: String
     let url: URL?
     
+    var didYouFeelItUrl: URL? {
+        url?.appendingPathComponent("/tellus")
+    }
+    
     var date: Date {
         Date(timeIntervalSince1970: time / 1000)
     }

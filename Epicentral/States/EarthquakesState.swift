@@ -28,7 +28,7 @@ class EarthquakesState: ObservableObject {
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { data in
             
-        }, receiveValue: {[weak self] data in
+        }, receiveValue: { [weak self] data in
             self?.earthquakes = data.earthquakes
             self?.isLoading = false
         }).store(in: &cancellables)

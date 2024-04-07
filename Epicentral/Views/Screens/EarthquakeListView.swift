@@ -34,22 +34,20 @@ struct EarthquakeListView: View {
             NavigationStack {
                 Group {
                     if let earthquakes = searchResults, earthquakes.count > 0 {
-                        List(earthquakes) { earthquake in
-                            NavigationLink {
-                                EarthquakeDetailView(earthquake: earthquake)
-                                    .onAppear {
-                                        withAnimation {
-                                            state.shouldShowFloatingButton = false
-                                        }
+                        ScrollView {
+                            LazyVStack {
+                                ForEach(earthquakes, id: \.self) { earthquake in
+                                    NavigationLink {
+                                        EarthquakeDetailView(earthquake: earthquake)
+                                            .onAppear {
+                                                state.shouldShowFloatingButton = false
+                                            }
+                                    } label: {
+                                        EarthquakeRow(earthquake: earthquake)
+                                            .padding(.horizontal, 16.0)
                                     }
-                                    .onDisappear {
-                                        withAnimation {
-                                            state.shouldShowFloatingButton = true
-                                        }
-                                    }
-                                
-                            } label: {
-                                EarthquakeRow(earthquake: earthquake)
+                                    .accentColor(Color.black)
+                                }
                             }
                         }
                         
@@ -60,6 +58,8 @@ struct EarthquakeListView: View {
                     }
                 }
                 .onAppear {
+                    // TODO: Fetch earthquakes only if necessary
+                    state.shouldShowFloatingButton = true
                     state.fetchEarthquakes(startTime: settings.dateStart, endTime: settings.dateEnd)
                 }
                 .onChange(of: settings.dateStart) {

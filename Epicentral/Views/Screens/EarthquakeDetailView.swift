@@ -12,23 +12,16 @@ import WebKit
 struct EarthquakeDetailView: View {
     
     let earthquake: Earthquake
-
+    
     var body: some View {
-        Map(initialPosition: earthquake.geometry.mapCameraPosition) {
-            Marker(earthquake.properties.place ?? "Place", coordinate: earthquake.geometry.coordinate2D)
+        List {
             
-        }
-        .mapControls {
-//            MapUserLocationButton()
-//            MapCompass()
-//            MapScaleView()
-        }
-        ScrollView {
-            VStack(alignment: .leading) {
-                Text(earthquake.properties.title)
-                    .font(.title)
-                Spacer()
-                    .frame(height: 24)
+            // MARK: - Specifics
+            
+            Section("Earthquake specifics") {
+                HStack {
+                    Text(earthquake.properties.title)
+                }
                 HStack {
                     Text("Magnitude")
                     Spacer()
@@ -46,17 +39,44 @@ struct EarthquakeDetailView: View {
                         Text(tsunami ? "Yes" : "No")
                     }
                 }
-                if let url = earthquake.properties.url {
-                    HStack {
-                        Link("View on USGS", destination: url)
-                        Spacer()
-                    }
+            }
+            
+            // MARK: - Location
+            
+            Section("Location") {
+                if let place = earthquake.properties.place {
+                    Text(place)
                 }
                 
+                NavigationLink("View on map") {
+                    Map(initialPosition: earthquake.geometry.mapCameraPosition) {
+                        Marker(earthquake.properties.place ?? "Place", coordinate: earthquake.geometry.coordinate2D)
+                    }
+                    .navigationTitle("Earthquake location")
+                }
+            }
+            
+            // MARK: - Extra
+            
+            Section("Extra") {
+                if let url = earthquake.properties.url {
+                    HStack {
+                        Text("Additional details")
+                        Spacer()
+                        Link("View on USGS", destination: url)
+                    }
+                    
+                }
                 
+                if let didYouFeelItURL = earthquake.properties.didYouFeelItUrl {
+                    HStack {
+                        Text("Did you feel it?")
+                        Spacer()
+                        Link("Report to USGS", destination: didYouFeelItURL)
+                    }
+                }
             }
         }
-        .padding()
         .navigationTitle("Earthquake details")
     }
 }

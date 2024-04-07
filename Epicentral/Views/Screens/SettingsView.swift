@@ -14,11 +14,11 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Date & Time", content: {
+                Section("Date & Time") {
                     DatePicker("Start date", selection: $state.dateStart, displayedComponents: .date)
                     DatePicker("End date", selection: $state.dateEnd, displayedComponents: .date)
-                })
-                Section("Magnitude", content: {
+                }
+                Section("Magnitude") {
                     Picker("Minimum magnitude", selection: $state.magnitudeLower) {
                         ForEach(state.availableMinMagnitudes, id: \.self) { mag in
                             Text(String(mag))
@@ -31,7 +31,7 @@ struct SettingsView: View {
                         }
                         
                     }
-                })
+                }
                 //                Section("Location", content: {
                 //                    Text("Sorted by distance")
                 //                    Text("Max distance from location")
@@ -48,11 +48,11 @@ struct SettingsView: View {
                 //                    Text("Location")
                 //                })
                 
-                Section("About", content: {
+                Section("About") {
                     Text("Epicentral version \(AppVersionProvider.versionAndBuild)")
                     Text("Made by Brian Sakhuja")
                     Text("Earthquake data from USGS")
-                })
+                }
             }
             .navigationTitle("Search Settings")
 

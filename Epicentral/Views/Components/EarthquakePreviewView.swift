@@ -16,8 +16,11 @@ struct EarthquakePreviewView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(earthquake.properties.title)
-                    .font(.headline)
+                Button(earthquake.properties.title) {
+                    isShowingDetails = true
+                }
+                .font(.headline)
+                .multilineTextAlignment(.leading)
                 Spacer()
             }
             HStack {
@@ -29,16 +32,6 @@ struct EarthquakePreviewView: View {
                 Text("Date & Time")
                 Spacer()
                 Text(earthquake.properties.date.formatted(.dateTime))
-            }
-            if let tsunami = earthquake.properties.tsunami {
-                HStack {
-                    Text("Tsunami warning")
-                    Spacer()
-                    Text(tsunami ? "Yes" : "No")
-                }
-            }
-            Button("Details") {
-                isShowingDetails = true
             }
         }
         .padding()
