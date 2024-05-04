@@ -46,7 +46,6 @@ struct EarthquakeListView: View {
                                         EarthquakeRow(earthquake: earthquake)
                                             .padding(.horizontal, 16.0)
                                     }
-                                    .accentColor(Color.black)
                                 }
                             }
                         }

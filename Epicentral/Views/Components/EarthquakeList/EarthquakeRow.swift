@@ -15,7 +15,6 @@ struct EarthquakeRow: View {
                 VStack(alignment: .leading) {
                     Text("Magnitude")
                         .font(.footnote)
-                        .foregroundStyle(Color.gray)
                     Text(preciseRound(earthquake.properties.magnitude, precision: .hundredths))
                         .font(.title)
                         .bold()
@@ -24,13 +23,14 @@ struct EarthquakeRow: View {
                 VStack(alignment: .trailing) {
                     Text(earthquake.properties.date.formatted(date: .abbreviated, time: .shortened))
                         .font(.caption)
-                        .foregroundStyle(Color.gray)
+//                        .foregroundStyle(Color.gray)
                     Text(earthquake.properties.place ?? "Place")
                         .font(.subheadline)
                         .multilineTextAlignment(.trailing)
                     
                 }
             }
+            .foregroundStyle(Color.text)
     }
 }
 
