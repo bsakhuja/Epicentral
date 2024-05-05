@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class SettingsState: ObservableObject {
     
@@ -19,6 +20,14 @@ class SettingsState: ObservableObject {
     @Published var isMapView: Bool = false
     
     @Published var isPresented: Bool = false
+    
+    @Published var sortMethod: SortMethod = .none
+    
+    @Published var locationState = LocationState()
+    
+    var userLocation: CLLocation? {
+        locationState.locationManager.location
+    }
     
     let maximumMagnitude = 10
     

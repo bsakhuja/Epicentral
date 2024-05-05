@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @EnvironmentObject var settings: SettingsState
     @StateObject var state = EarthquakesState(earthquakeService: EarthquakeService())
-    @StateObject var settings = SettingsState()
+    
     @State private var mapMode: Bool = false
     
     var body: some View {
@@ -31,10 +32,6 @@ struct HomeView: View {
             .padding()
             .opacity(state.shouldShowFloatingButton ? 1 : 0)
         }
-        
-        
-        
-        
     }
 }
 

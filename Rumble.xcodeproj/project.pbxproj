@@ -33,8 +33,9 @@
 		06D24C9C2BE805A30092B445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D24C7C2BE805A30092B445 /* LaunchScreen.storyboard */; };
 		06D24C9D2BE805A30092B445 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D24C7D2BE805A30092B445 /* SettingsView.swift */; };
 		06D24C9E2BE805A30092B445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D24C802BE805A30092B445 /* Assets.xcassets */; };
-		06D24C9F2BE805A30092B445 /* EpicentralApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D24C812BE805A30092B445 /* EpicentralApp.swift */; };
+		06D24C9F2BE805A30092B445 /* RumbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D24C812BE805A30092B445 /* RumbleApp.swift */; };
 		06D24CA02BE805A30092B445 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D24C822BE805A30092B445 /* HomeView.swift */; };
+		06D24CA52BE80B130092B445 /* LocationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D24CA42BE80B130092B445 /* LocationState.swift */; };
 		06EFE9C82AFAB92000351973 /* RumbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9C72AFAB92000351973 /* RumbleTests.swift */; };
 		06EFE9D22AFAB92000351973 /* RumbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9D12AFAB92000351973 /* RumbleUITests.swift */; };
 		06EFE9D42AFAB92000351973 /* RumbleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFE9D32AFAB92000351973 /* RumbleUITestsLaunchTests.swift */; };
@@ -85,9 +86,10 @@
 		06D24C7C2BE805A30092B445 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06D24C7D2BE805A30092B445 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		06D24C802BE805A30092B445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		06D24C812BE805A30092B445 /* EpicentralApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpicentralApp.swift; sourceTree = "<group>"; };
+		06D24C812BE805A30092B445 /* RumbleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RumbleApp.swift; sourceTree = "<group>"; };
 		06D24C822BE805A30092B445 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		06D24CA22BE807190092B445 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06D24CA42BE80B130092B445 /* LocationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationState.swift; sourceTree = "<group>"; };
 		06EFE9B32AFAB91E00351973 /* Rumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rumble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06EFE9C32AFAB92000351973 /* RumbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RumbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06EFE9C72AFAB92000351973 /* RumbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RumbleTests.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		06D24C6A2BE805A30092B445 /* States */ = {
 			isa = PBXGroup;
 			children = (
+				06D24CA42BE80B130092B445 /* LocationState.swift */,
 				06D24C682BE805A30092B445 /* EarthquakesState.swift */,
 				06D24C692BE805A30092B445 /* SettingsState.swift */,
 			);
@@ -240,7 +243,7 @@
 				06D24C712BE805A30092B445 /* Utilities */,
 				06D24C7F2BE805A30092B445 /* Views */,
 				06D24C802BE805A30092B445 /* Assets.xcassets */,
-				06D24C812BE805A30092B445 /* EpicentralApp.swift */,
+				06D24C812BE805A30092B445 /* RumbleApp.swift */,
 				06D24C822BE805A30092B445 /* HomeView.swift */,
 			);
 			path = Rumble;
@@ -441,6 +444,7 @@
 			files = (
 				06D24C982BE805A30092B445 /* LoadingIndicator.swift in Sources */,
 				06D24C9A2BE805A30092B445 /* EarthquakeListView.swift in Sources */,
+				06D24CA52BE80B130092B445 /* LocationState.swift in Sources */,
 				06D24C952BE805A30092B445 /* EarthquakeRow.swift in Sources */,
 				06D24C8F2BE805A30092B445 /* SettingsState.swift in Sources */,
 				06D24C8E2BE805A30092B445 /* EarthquakesState.swift in Sources */,
@@ -455,7 +459,7 @@
 				06D24C862BE805A30092B445 /* EarthquakeGeometry.swift in Sources */,
 				06D24C9B2BE805A30092B445 /* EarthquakesMapView.swift in Sources */,
 				06D24C992BE805A30092B445 /* EarthquakeDetailView.swift in Sources */,
-				06D24C9F2BE805A30092B445 /* EpicentralApp.swift in Sources */,
+				06D24C9F2BE805A30092B445 /* RumbleApp.swift in Sources */,
 				06D24C932BE805A30092B445 /* Date.swift in Sources */,
 				06D24C942BE805A30092B445 /* Round.swift in Sources */,
 				06D24C962BE805A30092B445 /* FloatingButtonView.swift in Sources */,
@@ -626,7 +630,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 274;
+				CURRENT_PROJECT_VERSION = 287;
 				DEVELOPMENT_ASSET_PATHS = "\"Rumble/Preview Content\"";
 				DEVELOPMENT_TEAM = DUCAN2M87U;
 				ENABLE_PREVIEWS = YES;
@@ -634,6 +638,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Rumble/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Rumble needs your location to show earthquakes closest to you.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Rumble needs your location to show earthquakes closest to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -662,7 +668,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 274;
+				CURRENT_PROJECT_VERSION = 287;
 				DEVELOPMENT_ASSET_PATHS = "\"Rumble/Preview Content\"";
 				DEVELOPMENT_TEAM = DUCAN2M87U;
 				ENABLE_PREVIEWS = YES;
@@ -670,6 +676,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Rumble/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Rumble needs your location to show earthquakes closest to you.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Rumble needs your location to show earthquakes closest to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -697,7 +705,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 274;
+				CURRENT_PROJECT_VERSION = 287;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -716,7 +724,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 274;
+				CURRENT_PROJECT_VERSION = 287;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -734,7 +742,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 274;
+				CURRENT_PROJECT_VERSION = 287;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.PlateUITests;
@@ -751,7 +759,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 274;
+				CURRENT_PROJECT_VERSION = 287;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bsakhuja.PlateUITests;

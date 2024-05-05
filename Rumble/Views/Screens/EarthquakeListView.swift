@@ -13,10 +13,48 @@ struct EarthquakeListView: View {
     @EnvironmentObject var settings: SettingsState
     
     var filteredEarthquakes: [Earthquake]? {
-        state.earthquakes?.filter {
+        let filtered = state.earthquakes?.filter {
             $0.properties.magnitude < Double(settings.magnitudeUpper) &&
             $0.properties.magnitude > Double(settings.magnitudeLower)
         }
+        switch settings.sortMethod {
+        case .none:
+            return filtered
+        case .locationAscending:
+            if let userLocation = settings.userLocation {
+                return filtered?.sorted(by: { e1, e2 in
+                    e1.geometry.clLocation.distance(from: userLocation) < e2.geometry.clLocation.distance(from: userLocation)
+                })
+            } else {
+                return filtered
+            }
+            
+        case .locationDescending:
+            if let userLocation = settings.userLocation {
+                return filtered?.sorted(by: { e1, e2 in
+                    e1.geometry.clLocation.distance(from: userLocation) > e2.geometry.clLocation.distance(from: userLocation)
+                })
+            } else {
+                return filtered
+            }
+        case .magnitudeAscending:
+            return filtered?.sorted(by: { e1, e2 in
+                e1.properties.magnitude < e2.properties.magnitude
+            })
+        case .magnitudeDescending:
+            return filtered?.sorted(by: { e1, e2 in
+                e1.properties.magnitude > e2.properties.magnitude
+            })
+        case .timeAscending:
+            return filtered?.sorted(by: { e1, e2 in
+                e1.properties.time < e2.properties.time
+            })
+        case .timeDescending:
+            return filtered?.sorted(by: { e1, e2 in
+                e1.properties.time > e2.properties.time
+            })
+        }
+        
     }
     
     var searchResults: [Earthquake]? {

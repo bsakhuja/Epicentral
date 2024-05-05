@@ -11,6 +11,7 @@ import WebKit
 
 struct EarthquakeDetailView: View {
     
+    @EnvironmentObject var settings: SettingsState
     let earthquake: Earthquake
     
     var body: some View {
@@ -54,6 +55,15 @@ struct EarthquakeDetailView: View {
                     }
                     .navigationTitle("Earthquake location")
                 }
+                
+                if let location = settings.userLocation {
+                    HStack {
+                        Text("Distance from you")
+                        Spacer()
+                        Text("\((Int(earthquake.geometry.clLocation.distance(from: location)/1000))) km")
+                    }
+                    
+                }
             }
             
             // MARK: - Extra
@@ -83,4 +93,5 @@ struct EarthquakeDetailView: View {
 
 #Preview {
     EarthquakeDetailView(earthquake: Earthquake.testEarthquake)
+        .environmentObject(SettingsState())
 }

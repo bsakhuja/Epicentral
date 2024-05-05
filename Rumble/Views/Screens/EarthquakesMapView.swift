@@ -13,10 +13,9 @@ struct EarthquakesMapView: View {
     @ObservedObject var state: EarthquakesState
     @EnvironmentObject var settings: SettingsState
     
-    @State var region = MKCoordinateRegion(center:.init(latitude: -32.5,
-                                                        longitude: 115.75),
-                                           latitudinalMeters: 100_000,
-                                           longitudinalMeters: 100_000)
+    var initialMapCameraPosition: MapCameraPosition {
+        MapCameraPosition.userLocation(fallback: .automatic)
+    }
     
     @State private var selectedEarthquake: Earthquake?
     @State private var showingEarthquakePreview = false
@@ -32,11 +31,16 @@ struct EarthquakesMapView: View {
         if let earthquakes = filteredEarthquakes,
            earthquakes.count > 0
         {
-            Map(selection: $selectedEarthquake) {
+            Map(initialPosition: initialMapCameraPosition,
+                selection: $selectedEarthquake) {
+                Marker(item: .forCurrentLocation())
                 ForEach(earthquakes, id: \.self) { result in
                     Marker(result.properties.title, coordinate: result.geometry.coordinate2D)
                         .tag(result.id)
                 }
+            }
+            .mapControls {
+                MapUserLocationButton()
             }
             .onChange(of: selectedEarthquake) {
                 showingEarthquakePreview = selectedEarthquake != nil
@@ -53,7 +57,6 @@ struct EarthquakesMapView: View {
                         .presentationDetents([.fraction(0.25)])
                         .presentationDragIndicator(.visible)
                 }
-                
             })
         } else {
             VStack {

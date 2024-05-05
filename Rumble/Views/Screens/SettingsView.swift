@@ -32,6 +32,13 @@ struct SettingsView: View {
                         
                     }
                 }
+                Section("Sorting") {
+                    Picker("Sort method", selection: $state.sortMethod) {
+                        ForEach(SortMethod.allCases, id: \.self) { sortMethod in
+                            Text(sortMethod.rawValue)
+                        }
+                    }
+                }
                 //                Section("Location", content: {
                 //                    Text("Sorted by distance")
                 //                    Text("Max distance from location")
@@ -64,4 +71,17 @@ struct SettingsView: View {
 
 #Preview("Default") {
     SettingsView(state: SettingsState())
+}
+
+
+enum SortMethod: String, CaseIterable, Identifiable {
+    var id: String { return self.rawValue }
+    
+    case none = "None"
+    case locationAscending = "Location ascending (closest first)"
+    case locationDescending = "Location descending (farthest first)"
+    case magnitudeAscending = "Magnitude ascending (lowest first)"
+    case magnitudeDescending = "Magnitude descending (largest first)"
+    case timeAscending = "Time ascending (oldest first)"
+    case timeDescending = "Time descending (newest first)"
 }

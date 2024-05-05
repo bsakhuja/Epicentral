@@ -18,8 +18,8 @@ struct FloatingButtonView: View {
             Image(systemName: imageName)
                 .font(.title.weight(.semibold))
                 .padding()
-                .background(Color.xanadu)
-                .foregroundColor(.white)
+                .background(Color.accentColor)
+                .foregroundColor(Color.floatingButtonForeground)
                 .clipShape(Circle())
                 .shadow(radius: 4, x: 0, y: 4)
         }
