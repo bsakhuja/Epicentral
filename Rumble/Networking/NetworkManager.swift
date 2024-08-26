@@ -113,7 +113,7 @@ class EarthquakeService: EarthquakeServiceProtocol {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
         let startTimeString = dateFormatter.string(from: startTime)
-        let endTimeString = dateFormatter.string(from: endTime)
+        let endTimeString = dateFormatter.string(from: endTime.dayAfter)
         return apiClient.request(.query(startTime: startTimeString, endTime: endTimeString))
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EarthquakeListView: View {
+    @State private var isInitialLoad: Bool = true
     @State private var searchText = ""
     @ObservedObject var state: EarthquakesState
     @EnvironmentObject var settings: SettingsState
@@ -95,9 +96,12 @@ struct EarthquakeListView: View {
                     }
                 }
                 .onAppear {
-                    // TODO: Fetch earthquakes only if necessary
                     state.shouldShowFloatingButton = true
-                    state.fetchEarthquakes(startTime: settings.dateStart, endTime: settings.dateEnd)
+                    
+                    if isInitialLoad {
+                        state.fetchEarthquakes(startTime: settings.dateStart, endTime: settings.dateEnd)
+                        isInitialLoad = false
+                    }
                 }
                 .onChange(of: settings.dateStart) {
                     state.fetchEarthquakes(startTime: settings.dateStart, endTime: settings.dateEnd)
